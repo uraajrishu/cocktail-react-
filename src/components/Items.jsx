@@ -3,7 +3,7 @@ import {getCocktailById} from '../Redux/features/cocktil'
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
-const Itams = ({strDrink , strCategory ,strDrinkThumb ,idDrink }) => {
+const Items = ({strDrink , strCategory ,strDrinkThumb ,idDrink }) => {
   const navigate =  useNavigate()
   const dispatch = useDispatch()
   // const product = (id)=>{
@@ -31,4 +31,4 @@ const Itams = ({strDrink , strCategory ,strDrinkThumb ,idDrink }) => {
   )
 }
 
-export default Itams
+export default Items
