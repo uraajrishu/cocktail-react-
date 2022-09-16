@@ -7,14 +7,6 @@ export const fetchCocktails = createAsyncThunk(
       ).then((res) => res.json());
     }
   );
-  // export const fetchSingleCocktails = createAsyncThunk(
-  //   "cocktails/fetchSignleCocktails",
-  //   async ({ id }) => {
-  //     return fetch(
-  //       `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`
-  //     ).then((res) => res.json());
-  //   }
-  // );
 
 const cocktailSlice = createSlice({
   name: "cocktails",
@@ -24,6 +16,7 @@ const cocktailSlice = createSlice({
     error: null,
     cocktail: [],
     categorys:[],
+    categorysFilterData:[],
   },
   extraReducers: {
     [fetchCocktails.pending]: (state, action) => {
@@ -40,25 +33,13 @@ const cocktailSlice = createSlice({
       state.loading = false;
       state.error = action.payload;
     },
-    // [fetchSingleCocktails.pending]: (state, action) => {
-    //     state.loading = true;
-    //   },
-    //   [fetchSingleCocktails.fulfilled]: (state, action) => {
-    //     state.loading = false;
-    //     state.cocktail = action.payload.drinks;
-    //   },
-    //   [fetchSingleCocktails.rejected]: (state, action) => {
-    //     state.loading = false;
-    //     state.error = action.payload;
-    //   },
-      
   },
   reducers:{
     getCocktailById:(state,action)=>{
       state.cocktail = state.cocktails.find((ele => ele.idDrink === action.payload))
      },
     getCocktailByCategory:(state,action)=>{
-      state.cocktails = state.cocktails.filter((ele => ele.strCategory === action.payload))
+      state.categorysFilterData = state.cocktails.filter((ele => ele.strCategory === action.payload))
      },
   }
 });
