@@ -11,7 +11,7 @@ const RightSide = () => {
 
     const searchByName = ()=>{
         setCloseIcon(true)
-        let fiter = cocktails.filter(ele => ele.strDrink.toLowerCase() === inputData.toLocaleLowerCase())
+        let fiter = cocktails.filter(ele => ele.strDrink.toLowerCase() === inputData.toLowerCase())
         setFilterData(fiter);
     }
 
