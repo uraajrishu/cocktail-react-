@@ -1,0 +1,92 @@
+.main{
+  background-color: aliceblue;
+  box-shadow: inset #00000029 0px -20px 20px;
+}
+.fast_side{
+  position: relative;
+  top: 22vh;
+  left: 150px;
+
+}
+.fast_side .bar_logo img{
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
+}
+.fast_side .short_info p{
+  margin-bottom: 0px;
+}
+.mid_side img{
+  height: 40vh;
+}
+
+.home_main{
+  padding: 10vh   ;
+  background-color: rgba(220, 223, 225, 0.503);
+}
+
+.navBar li{
+  list-style: none;
+  color: black;
+  font-weight: 700;
+  margin: 3px;
+  padding: 5px;
+  background-color: rgba(137, 70, 200, 0.246);
+  border-radius: 5px;
+  width: 15vw;
+  text-align: center;
+  transition: all .3s;
+  cursor: pointer;
+
+}
+.navBar li:hover{
+  background-color: rgba(137, 70, 200, 0.625);
+}
+
+.right_content .row{
+  height: 132px;
+  width: 35vw;
+ 
+}
+.right_content .card{
+  transition: all .3s;
+  cursor: pointer; 
+}
+.right_content .card:hover{
+ transform: scale(1.05);
+  
+}
+.right_content .col-md-4 img{
+  height: 131px;
+  width: 236px;
+  border-radius: 5px;
+}
+
+.right_content .search{
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+.left_content{
+  text-align: center;
+  background-color: white;
+  height: 40vh;
+  width: 20vw;
+  border-radius: 5px;
+}
+
+.fa{
+font-size: 36px;
+cursor: pointer;
+}
+
+.singleCocktill{
+  padding: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.singleCocktill .card{
+  width: 70vw;
+}
